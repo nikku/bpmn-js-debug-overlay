@@ -1,0 +1,16 @@
+.dbg-controls {
+  display: none;
+}
+
+.dbg-controls {
+  background: #CCC;
+  border-radius: 5px;
+
+  padding: 5px;
+}
+
+.dbg-step-active .dbg-controls,
+.hover .dbg-controls,
+.dbg-controls:hover {
+  display: block;
+}
