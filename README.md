@@ -1,4 +1,4 @@
-# bpmn-js-debug-overlays
+# bpmn-js-debug-controls
 
 Debugging / stepping controls for BPMN 2.0 processes. Use for simulation or actual debugging.
 
