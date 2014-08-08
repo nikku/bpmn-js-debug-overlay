@@ -1,16 +1,40 @@
-.dbg-controls {
+.dbg-controls,
+.dbg-controls > .play {
   display: none;
 }
 
-.dbg-controls {
-  background: #CCC;
-  border-radius: 5px;
-
-  padding: 5px;
+.dbg-controls > .play,
+.dbg-controls > .break {
+  margin: 5px;
+  cursor: pointer;
 }
 
+.dbg-controls {
+  background: #EEE;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.dbg-breakpoint-active .dbg-controls,
 .dbg-step-active .dbg-controls,
 .hover .dbg-controls,
 .dbg-controls:hover {
   display: block;
+}
+
+.dbg-controls > .break {
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  background: #BBB;
+}
+
+.dbg-breakpoint-active .dbg-controls > .break {
+  background: red;
+}
+
+.dbg-step-active .dbg-controls > .play {
+  display: inline-block;
 }
