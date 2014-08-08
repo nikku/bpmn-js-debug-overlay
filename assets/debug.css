@@ -1,3 +1,20 @@
+/**
+ * SVG markup
+ */
+.dbg-step-active .djs-visual > rect,
+.dbg-step-active .djs-visual > polygon,
+.dbg-step-active .djs-visual > path,
+.dbg-step-active .djs-visual > circle {
+  stroke: rgb(82, 180, 21) !important;
+}
+
+.dbg-step-active .djs-visual > path {
+  fill: rgb(82, 180, 21) !important;
+}
+
+/**
+ * HTML controls
+ */
 .dbg-controls,
 .dbg-controls > .play {
   display: none;
@@ -13,6 +30,9 @@
   background: #EEE;
   border-radius: 5px;
   white-space: nowrap;
+
+  font-size: 15px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .dbg-breakpoint-active .dbg-controls,
@@ -32,7 +52,7 @@
 }
 
 .dbg-breakpoint-active .dbg-controls > .break {
-  background: red;
+  background: rgb(226, 52, 52);
 }
 
 .dbg-step-active .dbg-controls > .play {
