@@ -1,54 +1,55 @@
 {
   "name": "bpmn-js-debug-overlay",
   "version": "0.0.0",
-  "description": "A debug overlay for bpmn-js",
+  "description": "Debugging/stepping controls for bpmn-js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nikku/bpmn-js-cli"
+    "url": "https://github.com/Nikku/bpmn-js-debug-overlay"
   },
   "keywords": [
     "bpmn-js",
     "bpmn-js-plugin",
     "bpmn-js-overlay",
     "debugging",
+    "stepping",
     "debug",
     "debugger"
   ],
   "author": "Nico Rehwaldt<git_nikku@nixis.de>",
   "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "~0.7.2",
+    "bpmn-js": "^0.6.0",
+    "brfs": "~1.0.2",
+    "chai": "^1.9.1",
+    "diagram-js": "^0.6.0",
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.7.2",
     "grunt-jsdoc": "~0.5.1",
     "grunt-karma": "~0.8.0",
     "grunt-release": "~0.7.0",
-    "load-grunt-tasks": "~0.3.0",
-    "time-grunt": "~0.3.0",
-    "karma": "^0.12.21",
-    "karma-chrome-launcher": "~0.1.2",
-    "karma-phantomjs-launcher": "0.1.2",
-    "karma-ie-launcher": "~0.1.4",
-    "karma-firefox-launcher": "~0.1.3",
-    "karma-bro": "~0.6.0",
-    "bpmn-js": "^0.4.0",
-    "brfs": "^1.0.2",
     "jsondiffpatch": "^0.1.8",
-    "mocha": "^1.21.4",
-    "karma-mocha": "^0.1.7",
-    "chai": "^1.9.1",
+    "karma": "^0.12.21",
+    "karma-bro": "^0.7.0",
     "karma-chai": "^0.1.0",
-    "diagram-js": "^0.4.0"
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-ie-launcher": "~0.1.4",
+    "karma-mocha": "^0.1.7",
+    "karma-phantomjs-launcher": "0.1.2",
+    "load-grunt-tasks": "~0.3.0",
+    "mocha": "^1.21.4",
+    "time-grunt": "~0.3.0"
   },
   "dependencies": {
     "lodash": "~2.4.0",
     "jquery": "~2.1.0"
   },
   "peerDependencies": {
-    "bpmn-js": "^0.4.0",
-    "diagram-js": "^0.4.0"
+    "bpmn-js": "^0.6.0",
+    "diagram-js": "^0.6.0"
   },
   "browser": {
     "fs": false

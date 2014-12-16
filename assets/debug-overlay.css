@@ -1,0 +1,52 @@
+/**
+ * SVG markup
+ */
+.dbg-step-active .djs-visual > :first-child {
+  stroke: rgb(82, 180, 21) !important;
+}
+
+/**
+ * HTML controls
+ */
+.dbg-controls,
+.dbg-controls > .resume {
+  display: none;
+}
+
+.dbg-controls > .resume,
+.dbg-controls > .break {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dbg-controls {
+  background: #EEE;
+  border-radius: 5px;
+  white-space: nowrap;
+
+  font-size: 20px;
+}
+
+.dbg-breakpoint-active .dbg-controls,
+.dbg-step-active .dbg-controls,
+.hover .dbg-controls,
+.dbg-controls:hover {
+  display: block;
+}
+
+.dbg-controls > * {
+  display: inline-block;
+  color: #BBB;
+}
+
+.dbg-controls > *:hover {
+  color: #333;
+}
+
+.dbg-breakpoint-active .dbg-controls > .break {
+  color: #b5152b;
+}
+
+.dbg-step-active .dbg-controls > .resume {
+  display: inline-block;
+}

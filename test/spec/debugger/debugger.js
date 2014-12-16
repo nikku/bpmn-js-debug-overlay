@@ -31,7 +31,7 @@ function Debugger(eventBus, elementRegistry) {
 
   var self = this;
 
-  eventBus.on('debug.play', function(e) {
+  eventBus.on('debug.resume', function(e) {
 
     var element = e.element;
 
@@ -40,7 +40,9 @@ function Debugger(eventBus, elementRegistry) {
       return;
     }
 
-    next = self._elementRegistry.getById(next);
+    eventBus.fire('debug.resumed', e);
+
+    next = self._elementRegistry.get(next);
 
     self.step(next);
   });
@@ -48,7 +50,7 @@ function Debugger(eventBus, elementRegistry) {
 
 Debugger.prototype.step = function(shape) {
   if (_.isString(shape)) {
-    shape = this._elementRegistry.getById(shape);
+    shape = this._elementRegistry.get(shape);
   }
 
   this._eventBus.fire('debug.step', { element: shape });
