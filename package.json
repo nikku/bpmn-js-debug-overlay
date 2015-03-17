@@ -1,6 +1,6 @@
 {
   "name": "bpmn-js-debug-overlay",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Debugging/stepping controls for bpmn-js",
   "scripts": {
     "test": "grunt test"
