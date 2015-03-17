@@ -9,12 +9,13 @@
  * HTML controls
  */
 .dbg-controls,
-.dbg-controls > .resume {
+.dbg-controls > .resume,
+.dbg-controls > .step {
   display: none;
 }
 
 .dbg-controls > .resume,
-.dbg-controls > .break {
+.dbg-controls > .step {
   margin: 5px;
   cursor: pointer;
 }
@@ -43,10 +44,33 @@
   color: #333;
 }
 
-.dbg-breakpoint-active .dbg-controls > .break {
-  color: #b5152b;
+.djs-overlay .dbg-breakpoint .dbg-handle {
+  fill: none;
 }
 
-.dbg-step-active .dbg-controls > .resume {
+.dbg-breakpoint-active-before .dbg-breakpoint.before .dbg-handle,
+.dbg-breakpoint-active-after .dbg-breakpoint.after .dbg-handle {
+  fill: #b5152b;
+}
+
+.djs-overlay-debug-break-before .dbg-handle:hover,
+.djs-overlay-debug-break-after .dbg-handle:hover {
+  fill: #333;
+}
+
+.dbg-step-active .dbg-controls > .resume,
+.dbg-step-active .dbg-controls > .step {
   display: inline-block;
+}
+
+.dbg-breakpoint {
+  pointer-events: none;
+}
+
+.dbg-breakpoint .dbg-handle {
+  pointer-events: all;
+}
+
+.dbg-breakpoint.after .dbg-handle {
+  transform: rotate(90deg) translate(0,-20px);
 }
