@@ -18,13 +18,13 @@
     "debug",
     "debugger"
   ],
-  "author": "Nico Rehwaldt<git_nikku@nixis.de>",
+  "author": "Nico Rehwaldt <git_nikku@nixis.de>",
   "license": "MIT",
   "devDependencies": {
-    "bpmn-js": "^0.6.0",
-    "brfs": "~1.0.2",
+    "bpmn-js": "^0.9.0",
+    "brfs": "1.4.0",
     "chai": "^1.9.1",
-    "diagram-js": "^0.6.0",
+    "diagram-js": "^0.9.0",
     "grunt": "^0.4.4",
     "grunt-contrib-jshint": "^0.7.2",
     "grunt-jsdoc": "~0.5.1",
@@ -32,7 +32,7 @@
     "grunt-release": "~0.7.0",
     "jsondiffpatch": "^0.1.8",
     "karma": "^0.12.21",
-    "karma-bro": "^0.7.0",
+    "karma-browserify": "^4.0.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "~0.1.2",
     "karma-firefox-launcher": "~0.1.3",
@@ -44,14 +44,11 @@
     "time-grunt": "~0.3.0"
   },
   "dependencies": {
-    "lodash": "~2.4.0",
-    "jquery": "~2.1.0"
+    "lodash": "^3.0.0",
+    "min-dom": "^0.2.0"
   },
   "peerDependencies": {
-    "bpmn-js": "^0.6.0",
-    "diagram-js": "^0.6.0"
-  },
-  "browser": {
-    "fs": false
+    "bpmn-js": "^0.9.0",
+    "diagram-js": "^0.9.0"
   }
 }

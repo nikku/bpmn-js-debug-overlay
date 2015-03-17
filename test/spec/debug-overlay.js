@@ -5,8 +5,6 @@ var TestHelper = require('../test-helper');
 /* global bootstrapModeler, inject */
 
 
-var _ = require('lodash');
-
 var fs = require('fs');
 
 var drawModule = require('bpmn-js/lib/core'),
@@ -14,6 +12,8 @@ var drawModule = require('bpmn-js/lib/core'),
     aModule = require('./debugger'),
     debugOverlayModule = require('../../');
 
+
+var domMatches = require('min-dom/lib/matches');
 
 var diagramXML = fs.readFileSync('resources/process.bpmn', 'utf-8');
 
@@ -39,7 +39,7 @@ describe('debug-overlay', function() {
         return false;
       }
 
-      return container.html.is('.dbg-step-active');
+      return domMatches(container.html, '.dbg-step-active');
     }
 
 
@@ -101,7 +101,7 @@ describe('debug-overlay', function() {
         return false;
       }
 
-      return container.html.is('.dbg-breakpoint-active');
+      return domMatches(container.html, '.dbg-breakpoint-active');
     }
 
 
