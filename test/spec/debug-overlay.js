@@ -20,11 +20,26 @@ var diagramXML = fs.readFileSync('resources/process.bpmn', 'utf-8');
 
 describe('debug-overlay', function() {
 
+  var debugOverlayConfig = {
+    buttons: {
+      'break': {
+        text: 'b'
+      },
+      'resume': {
+        text: 'r'
+      }
+    }
+  };
+
+
   describe('stepping', function() {
 
     var testModules = [ drawModule, selectionModule, aModule, debugOverlayModule ];
 
-    beforeEach(bootstrapModeler(diagramXML, { modules: testModules }));
+    beforeEach(bootstrapModeler(diagramXML, {
+      modules: testModules,
+      debugOverlay: debugOverlayConfig
+    }));
 
     var overlays;
 
@@ -84,7 +99,10 @@ describe('debug-overlay', function() {
 
     var testModules = [ drawModule, selectionModule, aModule, debugOverlayModule ];
 
-    beforeEach(bootstrapModeler(diagramXML, { modules: testModules }));
+    beforeEach(bootstrapModeler(diagramXML, {
+      modules: testModules,
+      debugOverlay: debugOverlayConfig
+    }));
 
 
     var overlays;
