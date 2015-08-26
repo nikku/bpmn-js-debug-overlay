@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nikku/bpmn-js-debug-overlay"
+    "url": "https://github.com/nikku/bpmn-js-debug-overlay"
   },
   "keywords": [
     "bpmn-js",
@@ -31,7 +31,7 @@
     "grunt-karma": "~0.8.0",
     "grunt-release": "~0.7.0",
     "jsondiffpatch": "^0.1.8",
-    "jasmine-test-container-support": "^0.1.2",
+    "mocha-test-container-support": "^0.1.0",
     "karma": "^0.12.21",
     "karma-browserify": "^4.0.0",
     "karma-chai": "^0.1.0",
